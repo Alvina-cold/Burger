@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.main{/*всему первому div создали фон градиент( скопировали из макета)*/
+    background: linear-gradient(180deg, #0C4C7B -100%, #1E2F40 100%);
+}
+.container{/*Задаем контентную ширину*/
+    max-width: 1180px;/*На макете ширина двух блоков с бутер 1180, мы написали максимальную*/
+    margin: 0 auto;/*Объяснила,что это для того, чтобы поставить по центру сам блок-контейнер*/
+    display: flex;
+    justify-content: space-between;/*чтобы изображение бургера было,  как бы, во втором столбце*/
+
+}
+.text{
+    color: #FAF9F9;
+    flex: 0 0 580px;/*РАЗБОР НА ОСНОВНОМ КУРСЕ. Ограничиваем текст, поскольку он вылезает*/
+    padding-top: 170px;
+    padding-bottom: 170px;
+}
+h1{
+    font-size: 120px;/*Из макета*/
+    font-weight: 800;
+    text-transform: uppercase;/*Вск буквы большие*/
+    line-height: 120px;/*Межстрочный интервал, в макете он 140рх*/
+    margin-bottom: 40px;
+}
+h1 span{/*Обращаемся к span, который внутри h1*/
+    color: #FBB731;/*Из макета*/
+    font-size: 30px;/*Из макета*/
+    font-weight: 700;/*Понижаем значение, как в макете, т.е. переобозначаем*/
+    line-height: 38px;
+    display: block;/*Благодаря этому перенесли "Новые бургеры" на новую строчку*/
+    margin-bottom: 10px;/*Отступ между "работаем" и "лучшие", посмотреть это свойство*/
+
+}
+p{
+    font-family: 'Lato', sans-serif;
+    font-size: 19px;
+    line-height: 1.4; /*В макете 140%, мы ставим 1.4 пропрорциональность*/
+    margin-bottom: 42px;
+}
+a{
+    color: #1E2F40;
+    background-color: #FBB731;;
+    border-radius: 5px;/*Из макета*/
+    text-decoration: none;/*Убираем подчеркивание сылки от браузера(синий цвет)*/
+    padding: 20px 45px;
+    display: inline-block;/*Если уберем это, то кнопка будет наслаиваться на текст*/
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+.visual{
+    flex-grow: 1;/*не разобрали*/
+    display: flex;/*Сдвинули оранж прямоуг вправо*/
+    justify-content: flex-end;/*Сдвинули оранж прямоуг вправо*/
+    position: relative;
+
+}
+.bg{/*Для оранж прямоуг резервируем место*/
+    width: 432px;/*Из макета*/
+    height: 100%;
+    background: linear-gradient(2.42deg, #F37335 -19.6%, #FBB731 100.79%, #FDC830 100.79%);/*Из макета*/
+}
+img{
+    width: 829px;
+    position: absolute;/*позиция абсолютная относительно блока визуал, поэтому там написали relative*/
+    right: -168px;/*Сдвинули бургер вправо*/
+}
